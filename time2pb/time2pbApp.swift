@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate{
     @ObservedObject var timeDataHelper=TimeDataHelper.shared
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        NSApp.setActivationPolicy(.accessory) ///起動時にドックにアプリを表示しない
         popover.behavior = .transient
         popover.contentViewController = NSHostingController(rootView: ContentView())
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
