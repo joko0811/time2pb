@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var timeDataHelper=TimeDataHelper.shared
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("time copied: ")+Text(timeDataHelper.timedata!)
         }
-        .padding()
+        .frame(width: 150, height: 30)
     }
 }
 
