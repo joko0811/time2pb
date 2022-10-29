@@ -11,7 +11,7 @@ struct ContentView: View {
     @ObservedObject var timeDataHelper=TimeDataHelper.shared
     var body: some View {
         VStack {
-            Text("time copied: ")+Text(timeDataHelper.timedata!)
+            Text("copied! : ")+Text(timeDataHelper.timedata!)
         }
         .frame(width: 150, height: 30)
     }
